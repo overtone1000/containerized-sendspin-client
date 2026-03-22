@@ -1,0 +1,22 @@
+[Unit]
+Description=Sendspin Client
+Wants=network.target
+#Wants=network-online.target For rootless
+
+[Container]
+ContainerName=sendspin-client
+Image=localhost/sendspin-client
+
+#PublishPort=30125:30125
+
+[Service]
+Restart=always
+
+#Default for systemd is 90 seconds. This allows the container more time to start.
+TimeoutStartSec=900
+#Wait 10 seconds before attempting a restart
+RestartSec=10
+
+[Install]
+# Start by default on boot
+WantedBy=default.target

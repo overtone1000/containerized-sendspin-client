@@ -1,0 +1,6 @@
+FROM docker.io/library/ubuntu:latest
+RUN apt-get --yes update && apt-get --yes install pipx libportaudio2
+RUN pipx install uv
+ENV PATH="$PATH:/root/.local/bin"
+RUN uv tool install sendspin
+CMD ["sendspin"]
