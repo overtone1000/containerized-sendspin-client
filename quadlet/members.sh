@@ -6,9 +6,9 @@ QUADLET_MEMBERS=(
     #Pod first
     #Resources next
     #Container builds
-    sendspin-rs-build
+    sendspin-build
     #Containers in dependency order
-    sendspin-rs
+    sendspin
 )
 
 echo Quadlet members are: ${QUADLET_MEMBERS[@]}

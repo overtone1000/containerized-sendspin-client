@@ -36,8 +36,8 @@ start_quadlet() {
     for MEMBER in ${QUADLET_MEMBERS[@]}
     {
         echo "Starting $MEMBER"
-        #ssh -T $SSH_DEST "systemctl --user restart $MEMBER"
-        ssh -T $SSH_DEST "systemctl restart $MEMBER"
+        ssh -T $SSH_DEST "systemctl --user restart $MEMBER"
+        #ssh -T $SSH_DEST "systemctl restart $MEMBER"
     }
 }
 

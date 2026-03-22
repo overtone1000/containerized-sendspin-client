@@ -2,4 +2,7 @@
 
 set -e
 
-sendspin --id $ID --name $NAME --url $SERVER_URL
+echo Starting $NAME $ID $SERVER_URL
+
+sendspin --list-audio-devices
+sendspin daemon --id "$ID" --name "$NAME" --url "$SERVER_URL"

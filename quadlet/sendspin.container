@@ -9,6 +9,11 @@ Image=localhost/sendspin-client
 
 #PublishPort=30125:30125
 
+AddDevice=/dev/snd:/dev/snd:rw
+GroupAdd=keep-groups
+#Just using audio group didn't work. Not sure why.
+#GroupAdd=audio
+
 Environment=ID=rpi_sendspin_00
 Environment=NAME="Raspberry Pi Sendspin"
 Environment=SERVER_URL=ws://10.10.10.10:8927/sendspin
