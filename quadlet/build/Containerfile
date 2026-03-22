@@ -3,4 +3,5 @@ RUN apt-get --yes update && apt-get --yes install pipx libportaudio2
 RUN pipx install uv
 ENV PATH="$PATH:/root/.local/bin"
 RUN uv tool install sendspin
-CMD ["sendspin"]
+COPY start.sh start.sh
+CMD ["bash start.sh"]
